@@ -287,21 +287,6 @@ export default class Slider extends PureComponent {
     );
   };
 
-  _getPropsForComponentUpdate(props) {
-    var {
-      value,
-      onValueChange,
-      onSlidingStart,
-      onSlidingComplete,
-      style,
-      trackStyle,
-      thumbStyle,
-      ...otherProps,
-    } = props;
-
-    return otherProps;
-  };
-
   _handleStartShouldSetPanResponder = (e: Object, /*gestureState: Object*/): boolean => {
     // Should we become active when the user presses down on the thumb?
     return this._thumbHitTest(e);
